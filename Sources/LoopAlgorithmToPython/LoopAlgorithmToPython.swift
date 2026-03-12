@@ -108,7 +108,7 @@ public func generatePrediction(jsonData: UnsafePointer<Int8>?) -> UnsafeMutableP
             basal: input.basal,
             sensitivity: input.sensitivity,
             carbRatio: input.carbRatio,
-            algorithmEffectsOptions: .insulin, // Here we can adjust which predictive factor to output
+            algorithmEffectsOptions: .all, // Here we can adjust which predictive factor to output
             useIntegralRetrospectiveCorrection: input.useIntegralRetrospectiveCorrection,
             includingPositiveVelocityAndRC: input.includePositiveVelocityAndRC
         )
@@ -176,7 +176,7 @@ public func getPredictionDates(jsonData: UnsafePointer<Int8>?) -> UnsafePointer<
             basal: input.basal,
             sensitivity: input.sensitivity,
             carbRatio: input.carbRatio,
-            algorithmEffectsOptions: .insulin,
+            algorithmEffectsOptions: .all,
             useIntegralRetrospectiveCorrection: input.useIntegralRetrospectiveCorrection
         )
         // Prepare prediction dates as a comma-separated string
